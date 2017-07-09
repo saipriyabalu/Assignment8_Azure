@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Display</title>
+</head>
+<body>
+<form action="/comment" method="post">
+{%for item in img%}
+    <form action="/" method="post">
+        Photo Id: {{item.get('photo_id')}}<br>
+        <img src="{{ item.get('img') }}" style="width:508px;height:328px;"></img><br>
+
+
+    </form>
+
+
+</body>
+</html>

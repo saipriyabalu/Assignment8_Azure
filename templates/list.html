@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Display</title>
+</head>
+<body>
+
+<img src="{{ img }}"/>
+{%for item in img%}
+    <form action="/comment" method="post|get">
+        Photo ID: {{item.get('photo_id')}}<br>
+        Filename: {{item.get('filename')}}<br>
+        <img src="{{ item.get('img') }}" style="width:508px;height:328px;"></img><br>
+        Comment: {{item.get('comment')}}<br><br>
+        <input type="hidden" name="imgID" value="{{ item }}"/>
+        Add comment:<input type="text" name="commenthere" value="addcomment"/>
+        <input type="submit" name="add Comment"  value = "add Comment"/>
+    </form>
+{% endfor %}
+
+
+</body>
+</html>

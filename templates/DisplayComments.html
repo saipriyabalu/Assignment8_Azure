@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<H1>Name: Saipriya Thirvakadu ID: 1001373543</H1>
+{%for item in img%}
+    <form action="/addComment" method="post">
+        Filename: {{item.fileName}}<br>
+        <img src="{{ item.get('img') }}" style="width:508px;height:328px;"></img><br>
+        <input type="hidden" name="imgID" value="{{ item }}"/>
+        <input type="submit" name="add Comment"  value = "add Comment"/>
+    </form>
+{% endfor %}
+</body>
+</html>

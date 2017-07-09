@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display image from description</title>
+</head>
+<body>
+Time: {{ time }}
+{%for item in img%}
+    <img src='{{item.get("path_url")}}' />
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+</head>
+<body>
+<H1>Name: Saipriya Thirvakadu, Student ID: 1001373543</H1>
+<h1>File Upload</h1>
+<h1>Here you can upload a file</h1>
+<form id="upload_form" action="/uploadImage" method="POST" enctype="multipart/form-data">
+    File name:<input type="text" name="file" placeholder="filename">
+    Upload images:<input type="file" name="upload_files" accept="uploaded_files/*" multiple>
+    <br>
+    <br>Comment: <input type="text" name="comments" placeholder="Comment">
+    <input type="submit" name="upload" value="Upload">
+</form>
+
+<form action="/bulkUpload" method="post">
+<input type="submit" name="bulkUpload" value="Bulk Upload"/>
+</form>
+
+<form action="/show" method="get">
+<input type="submit" name="show" value="show Images"/>
+</form>
+<form action="/list" method="post|get">
+<input type="submit" name="list" value="List Images"/>
+</form>
+<br><br>
+<form action="/ing" method="post">
+    Enter Ingredient:<input type="text" name="text"/>
+<input type="submit" name="list" value="Display"/>
+</form>
+
+<form action="/query1" method="post">
+Enter the image name : <input type="text" name="val1" value=""/>
+<input type="submit" name="list" value="Query"/>
+</form><br>
+
+<form action="/repeatreq" method="post">
+Enter the image name : <input type="text" name="val1" value=""/>
+<input type="submit" name="list" value="Query"/>
+</form><br>
+<form action="/query2" method="post">
+Calories from: <input type="text" name="val1" value=""/>
+Calories from: <input type="text" name="val2" value=""/>
+<input type="submit" name="list" value="Query"/>
+</form><br>
+<form action="/query3" method="post">
+ greater than: <input type="text" name="val1" value=""/>
+
+    <input type="submit" name="list" value="Query"/>
+</form><br>
+
+<form action="/query4" method="post|get">
+fat greater than :<input type="text" name="val1" value=""/>
+fat less than: <input type="text" name="val2" value=""/>
+    <input type="submit" name="list" value="Query"/>
+</form><br>
+
+</body>
+</html>

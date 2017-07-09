@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Images</title>
+</head>
+<body>
+<h1>Top 10 ingredients and images:</h1>
+{{ img }}
+{%for item in img%}
+    <img src="{{ item.get('path_url') }}" style="width:508px;height:328px;"></img><br>
+{% endfor %}
+
+</body>
+</html>
